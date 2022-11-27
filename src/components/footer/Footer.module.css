@@ -1,0 +1,13 @@
+@tailwind components;
+
+@layer components {
+    .nameUnderline {
+        @apply relative after:absolute after:top-[calc(100%+.15rem)] hover:after:top-[calc(100%+.25rem)] after:transition-all after:left-0 after:right-0 after:block after:h-0.5;
+    }
+    .nameUnderline.red {
+        @apply after:bg-red-400;
+    }
+    .nameUnderline.yellow {
+        @apply after:bg-yellow-400;
+    }
+}
