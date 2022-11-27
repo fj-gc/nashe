@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet"> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<link rel="icon" href="https://tinyurl.com/4n2hmx82">
+		<title>Partido NASHE</title>
+		<style>
+			.boleta {
+				height: 500px;
+				width: calc(0.618 * 500px + 1px);
+				border: 1px solid black;
+				margin: 0 auto 0 auto;
+				position: relative;
+				white-space: nowrap;
+				
+			}
+			.boleta .boleta-grid {
+				height: 500px;
+				width: calc(0.618 * 500px);
+				
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr 1fr 35%;
+				grid-column-gap: 0px;
+				grid-row-gap: 0px;
+
+			}
+			.boleta .top {
+				background-color: white;
+				color: black
+			}
+			.boleta .mid {
+				background-image: url("./nashe-foton.jpeg");
+				background-size: 100%
+			}
+			.boleta .bottom {
+				background-color: orange;
+				color: white;
+			}
+			.boleta .nombre {
+				padding-top: 2em;
+				font-family: 'Bebas Neue';
+			}
+			
+			.nashear-texto {
+				font-family: 'Bebas Neue';
+			}
+			
+			.boleta .nombre .pnashe {
+				text-align: center;
+				width: 100%;	
+				margin: 0;
+			}
+			.boleta .numero-de-lista {
+				background-color: white;
+				border: 1px dashed black;
+				float: left;
+				color: black;
+				padding: 0.1em;
+				
+				display: grid;
+				grid-template-columns: 10px 1fr;
+				grid-template-rows: 1fr;
+				grid-column-gap: 0px;
+				grid-row-gap: 0px;
+
+			}
+			.boleta .lista-text {
+				writing-mode: sideways-lr;
+				font-size: 8px;
+			}
+			.boleta .bottom {
+				font-family: 'Bebas Neue';
+				padding: 10px 20px 10px 20px;
+			}
+			.boleta .bottom .name {
+				font-size: 24px;
+				line-height: 1em;
+				padding: 0;
+			}
+			.boleta .bottom .surname {
+				font-size: 48px;
+				line-height: 1em;
+				padding: 0;
+			}
+			.boleta .nashe-line {
+				margin: 16px auto 0px auto;
+				font-size: 64px;
+				font-family: 'Noto Color Emoji', sans-serif;
+			}
+			.boleta .nashe-container {
+				transform: rotate(5deg);
+				background-color: black;
+				color: white;
+				text-align: center;
+				width: 150px;
+				padding: 0.1em 0px 0.1em 0px;
+				display: inline-block;
+			}
+			.boleta .nashe {
+				transform: rotate(-5deg)
+			}
+			.boleta .qr {
+				top: calc(500px - 55px);
+				left: calc(0.618 * 500px - 55px);
+				position: relative;
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+		<script>
+		function printDiv2(div)
+		{
+		    html2canvas((div)).then(function(canvas) {
+			    var img = canvas.toDataURL();
+			    console.log(img);
+			    window.open(img);
+		      }
+		    )
+		}
+		</script>
+	</head>
+	<body>
+		
+		<marquee class=nashear-texto><h1>🤘Nashe🤘</h1></marquee>
+		
+		
+		<center>
+			
+			<p>¡Este es nuestro video! (muy bueno)</p>
+		
+		<video controls>
+			<source media="(max-width:600px)" src="./spot-mobile.mp4" type="video/mp4">
+			<source media="(min-width:600px)" src="./spot-peor.mp4" type="video/mp4">
+		</video>
+		
+		</center>
+		
+		<center><p>¡Esta es nuestra boleta!</p></center>
+		
+		<div class=boleta>
+			<div class=boleta-grid>
+				<div class=top>
+					<div class=numero-de-lista><span class=lista-text>Lista</span><span>42</span></div>
+					<div class=nombre>
+						<div class=pnashe style='font-size: 14px'>Partido Nacional Autonomista Solucionista Híbrido Ecológico</div>
+						<div class=nashe-line>🤘<span><div class=nashe-container><div class="nashe nashear-texto">NASHE</div></div></span>🤘</div>
+					</div>
+				</div>
+				<div class=mid>
+				</div>
+				<div class=bottom>
+					<div class=name>Francisco Javier</div>
+					<div class=surname>Grecco Carman</div>
+					<div class=name>Juan Manuel</div/>
+					<div class=surname>Lupacchini</div>
+				</div>
+			</div>
+			<img class=qr src="./nashe-qr.png"></img>
+		</div>
+		
+		<center>
+			<p>Acuérdense de votar por el partido nashe</p>
+		<p>
+			Como llegaste hasta acá, te dejo un jueguito para que juegues:
+		</p>
+			<iframe src="https://oimo.io/works/bubbles/" height=300px width=100%></iframe>
+			
+			<p>Si votas por nosotros vamos a hacer que todas las paginas web tengan jueguitos divertidos</p>
+			
+			<a href="/nashe/clima.html">El clima hoy</a>
+			
+			<p>Tocar colores:</p>
+			
+			<iframe src="http://www.intotime.com/"  height=300px width=100%></iframe>
+			
+			<p>Carrera de cuadraditos</p>
+			
+			<iframe src="https://checkboxrace.com/"  height=300px width=100%></iframe>
+		</center>
+		
+		
+	</body>
+</html>
