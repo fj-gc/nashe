@@ -28,6 +28,6 @@
         @apply left-0 w-screen;
     }
     .sidebar {
-        @apply -left-[calc(100vw+3rem)] transition-all fixed top-0 bottom-0 z-50 bg-black flex flex-col justify-between;
+        @apply -left-[200vw] transition-all duration-300 fixed top-0 bottom-0 z-50 bg-black flex flex-col justify-between;
     }
 }
