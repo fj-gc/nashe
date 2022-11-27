@@ -66,7 +66,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-col gap-8 md:hidden">
                         <h3 className="uppercase text-2xl title-underline red">Nuestra boleta</h3>
-                        <img src="nashe.jpg" />
+                        <img src="img/nashe.jpg" />
                     </div>
                     <div className="flex flex-col gap-8 md:hidden">
                         <h3 className="uppercase text-2xl title-underline yellow">Video informativo</h3>
