@@ -2,7 +2,13 @@ import { useEffect, useRef } from 'react'
 
 import Head from 'next/head';
 
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
+
+import proposals from '../constants/proposals';
+
 import styles from '../styles/Home.module.css';
+import ProposalCard from '../components/ProposalCard';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -73,12 +79,48 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                    <div className='flex flex-col gap-8'>
+                        <div className='flex flex-row items-center justify-between'>
+                            <h3 className={`uppercase text-2xl ${styles.titleUnderline} ${styles.red}`}>Nuestras propuestas</h3>
+                            <Link href="/propuestas">
+                                <button className='text-neutral-200 transition flex flex-row items-center hover:text-red-400 whitespace-nowrap'>
+                                    Ver mas
+                                    <ChevronRightIcon className='h-6 w-6 ml-2' />
+                                </button>
+                            </Link>
+                        </div>
+                        <div className='block overflow-hidden max-w-6xl'>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 relative">
+                                {proposals.slice(0, 4).map((proposal, index) => {
+                                    if (index != 3) {
+                                        return (
+                                            <ProposalCard
+                                                key={index}
+                                                title={proposal.title}
+                                                content={proposal.content}
+                                                icon={proposal.icon} />
+                                        )
+                                    } else {
+                                        return (
+                                            <div className='lg:hidden'>
+                                                <ProposalCard
+                                                    key={index}
+                                                    title={proposal.title}
+                                                    content={proposal.content}
+                                                    icon={proposal.icon} />
+                                            </div>
+                                        )
+                                    }
+                                })}
+                            </div>
+                        </div>
+                    </div>
                     <div className="flex flex-col gap-8 md:hidden">
-                        <h3 className={`uppercase text-2xl ${styles.titleUnderline} ${styles.red}`}>Nuestra boleta</h3>
+                        <h3 className={`uppercase text-2xl ${styles.titleUnderline} ${styles.yellow}`}>Nuestra boleta</h3>
                         <img src="img/nashe.jpg" />
                     </div>
                     <div className="flex flex-col gap-8 md:hidden">
-                        <h3 className={`uppercase text-2xl ${styles.titleUnderline} ${styles.yellow}`}>Video informativo</h3>
+                        <h3 className={`uppercase text-2xl ${styles.titleUnderline} ${styles.red}`}>Video informativo</h3>
                         <video className="h-full w-full object-cover rounded" src="video/spot-mobile.mp4" controls />
                     </div>
                 </div>

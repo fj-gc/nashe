@@ -29,9 +29,11 @@ export default function Navbar() {
                         </svg>
                     </button>
                     <div className="flex flex-row items-center gap-8">
-                        <h5 className="text-3xl font-bold leading-none font-bebas">
-                            🤘NASHE🤘
-                        </h5>
+                        <Link href="/">
+                            <h5 className="text-3xl font-bold leading-none font-bebas">
+                                🤘NASHE🤘
+                            </h5>
+                        </Link>
                         <Link className="hover:underline hover:text-red-200 hidden md:block" href="/">
                             Inicio
                         </Link>

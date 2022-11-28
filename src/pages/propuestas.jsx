@@ -1,8 +1,14 @@
+import Head from "next/head"
+
 import proposals from "../constants/proposals"
+import ProposalCard from "../components/ProposalCard"
 
 export default function Propuestas() {
     return (
         <>
+            <Head>
+                <title>Propuestas - 🤘NASHE🤘</title>
+            </Head>
             <div className="w-full bg-black relative flex flex-col items-center justify-center px-8 pb-16 pt-12 md:pb-24 md:pt-20">
                 <div className="w-full max-w-6xl">
                     <h2 className="text-4xl uppercase">Con propuestas que <span className="text-yellow-400">funcionan</span> el cambio es <span className="text-red-400">posible</span></h2>
@@ -12,7 +18,7 @@ export default function Propuestas() {
             <div className="flex flex-col items-center gap-32 w-full px-8 pb-16">
                 <div className="w-full max-w-6xl relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16">
                     {proposals.map((proposal, index) => (
-                        <ProposalItem
+                        <ProposalCard
                             title={proposal.title}
                             content={proposal.content}
                             icon={proposal.icon}
@@ -30,17 +36,5 @@ export default function Propuestas() {
                 </div>
             </div>
         </>
-    )
-}
-
-function ProposalItem({ title, content, icon, key }) {
-    return (
-        <div className="flex flex-row gap-4 p-4 rounded bg-neutral-800 w-full" key={key}>
-            {icon}             
-            <div className="flex flex-col gap-2">
-                <h6 className="text-xl font-bold">{title}</h6>
-                <p>{content}</p>
-            </div>
-        </div>
     )
 }

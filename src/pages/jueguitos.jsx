@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image"
 
 import juegos from "../constants/jueguitos"
+import Head from "next/head";
 
 export default function Jueguitos() {
     var [selectedGame, setSelectedGame] = useState(null);
@@ -14,6 +15,9 @@ export default function Jueguitos() {
 
     return (
         <>
+            <Head>
+                <title>Jueguitos - 🤘NASHE🤘</title>
+            </Head>
             <div className="flex flex-col px-8 pb-16 pt-12 gap-24 items-center">
                 <div className="w-full max-w-6xl flex flex-row items-center gap-16">
                     <div className="flex flex-col gap-4 flex-1">
