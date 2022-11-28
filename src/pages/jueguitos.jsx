@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import { XMarkIcon, ArrowsPointingOutIcon, ArrowsPointingInIcon } from "@heroicons/react/24/outline";
 
@@ -12,6 +12,8 @@ import Head from "next/head";
 export default function Jueguitos() {
     var [selectedGame, setSelectedGame] = useState(null);
     var [fullScreen, setFullScreen] = useState(false);
+
+    var gameIframeRef = useRef(null);
 
     return (
         <>
@@ -115,7 +117,7 @@ export default function Jueguitos() {
                         <motion.div
                             className={"bg-black relative" + (!fullScreen ? " aspect-video w-[40rem] !max-w-screen rounded-md" : " h-screen w-screen")}
                             initial={{
-                                y: 10,
+                                y: 50,
                             }}
                             animate={{
                                 y: 0,
@@ -124,12 +126,20 @@ export default function Jueguitos() {
                                 }
                             }}
                             exit={{
-                                y: 10,
+                                y: 50,
                                 transition: {
                                     duration: 0.2
                                 }
                             }}>
-                            <iframe src={selectedGame.url} className="rounded-md h-full w-full" frameBorder={0} />
+                            <div className="h-6 w-6 m-auto top-0 bottom-0 left-0 right-0 absolute border-4 rounded-full border-transparent border-t-white animate-spin-fast duration-150 z-[-1]"></div>
+                            <iframe 
+                                src={selectedGame.url} 
+                                className="rounded-md h-full w-full hidden" 
+                                frameBorder={0} 
+                                onLoad={() => {
+                                    gameIframeRef.current.style.display = "block";
+                                }} 
+                                ref={gameIframeRef} />
                         </motion.div>
                     </motion.div>
                 )}

@@ -11,7 +11,10 @@ module.exports = {
         montserrat: ["'Montserrat'", 'sans-serif'],
         chivo: ["'Chivo'", 'sans-serif'],
         bebas: ["'Bebas Neue'", 'sans-serif']
-      }
+      },
+      animation: {
+        'spin-fast': 'spin 200ms linear infinite'
+      },
     },
   },
   plugins: [],
