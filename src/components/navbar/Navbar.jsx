@@ -9,10 +9,6 @@ import { SidebarStateContext } from '../../pages/_app';
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
-    var sidebarRef = useRef(null);
-    var openSidebarButtonRef = useRef(null);
-    var closeSidebarButtonRef = useRef(null);
-
     var sidebarContext = useContext(SidebarStateContext);
 
     function closeSidebar() {
@@ -23,26 +19,11 @@ export default function Navbar() {
         sidebarContext.toggleSidebar(true);
     }
 
-    useEffect(() => {
-        if (sidebarRef.current && openSidebarButtonRef.current) {
-            openSidebarButtonRef.current.addEventListener('click', openSidebar);
-        }
-
-        if (sidebarRef.current && closeSidebarButtonRef.current) {
-            closeSidebarButtonRef.current.addEventListener('click', closeSidebar);
-        }
-
-        return () => {
-            openSidebarButtonRef.current.removeEventListener('click', openSidebar);
-            closeSidebarButtonRef.current.removeEventListener('click', closeSidebar);
-        }
-    }, []);
-
     return (
         <>
             <div className="sticky top-0 left-0 right-0 transition flex flex-col items-center py-6 px-8 cursor-default bg-black z-50">
                 <div className="w-full max-w-6xl flex flex-row items-center justify-between">
-                    <button className="p-3 rounded-full hover:bg-neutral-800 -m-3 md:hidden" ref={openSidebarButtonRef}>
+                    <button className="p-3 rounded-full hover:bg-neutral-800 -m-3 md:hidden" onClick={openSidebar}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
@@ -68,13 +49,13 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-            <div className={styles.sidebar + (sidebarContext.isSidebarOpen ? " " + styles.open : "")} ref={sidebarRef}>
+            <div className={styles.sidebar + (sidebarContext.isSidebarOpen ? " " + styles.open : "")}>
                 <div>
                     <div className="flex flex-row items-center justify-between p-6">
                         <h5 className={`text-3xl font-bold ${styles.logo}`}>
                             🤘NASHE🤘
                         </h5>
-                        <button className="p-2 hover:bg-neutral-800 rounded-full -m-2" ref={closeSidebarButtonRef}>
+                        <button className="p-2 hover:bg-neutral-800 rounded-full -m-2" onClick={closeSidebar}>
                             <XMarkIcon className="w-6 h-6" />
                         </button>
                     </div>
