@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useContext } from "react";
 
 import Link from "next/link";
 
 import { XMarkIcon, HomeIcon, DocumentCheckIcon, PuzzlePieceIcon, PhotoIcon, VideoCameraIcon } from '@heroicons/react/24/outline';
+
+import { SidebarStateContext } from '../../pages/_app';
 
 import styles from "./Navbar.module.css";
 
@@ -11,17 +13,17 @@ export default function Navbar() {
     var openSidebarButtonRef = useRef(null);
     var closeSidebarButtonRef = useRef(null);
 
-    var [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    var sidebarContext = useContext(SidebarStateContext);
+
+    function closeSidebar() {
+        sidebarContext.toggleSidebar(false);
+    }
+
+    function openSidebar() {
+        sidebarContext.toggleSidebar(true);
+    }
 
     useEffect(() => {
-        function openSidebar() {
-            setIsSidebarOpen(true);
-        }
-
-        function closeSidebar() {
-            setIsSidebarOpen(false);
-        }
-
         if (sidebarRef.current && openSidebarButtonRef.current) {
             openSidebarButtonRef.current.addEventListener('click', openSidebar);
         }
@@ -67,35 +69,35 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-            <div className={styles.sidebar + (isSidebarOpen ? " " + styles.open : "")} ref={sidebarRef}>
+            <div className={styles.sidebar + (sidebarContext.isSidebarOpen ? " " + styles.open : "")} ref={sidebarRef}>
                 <div>
                     <div className="flex flex-row items-center justify-between p-6">
                         <h5 className={`text-3xl font-bold ${styles.logo}`}>
                             🤘NASHE🤘
                         </h5>
                         <button className="p-2 hover:bg-neutral-800 rounded-full -m-2" ref={closeSidebarButtonRef}>
-                            <XMarkIcon className="w-6 h-6" />                 
+                            <XMarkIcon className="w-6 h-6" />
                         </button>
                     </div>
                     <div className="text-lg select-none w-screen">
-                        <Link className="px-6 py-3 hover:bg-neutral-900 hover:text-red-200 w-full flex flex-row items-center justify-between cursor-pointer" href="/">
+                        <Link className="px-6 py-3 hover:bg-neutral-900 hover:text-red-200 w-full flex flex-row items-center justify-between cursor-pointer" href="/" onClick={closeSidebar}>
                             <span>Inicio</span>
-                            <HomeIcon className="w-6 h-6" />               
+                            <HomeIcon className="w-6 h-6" />
                         </Link>
-                        <Link className="px-6 py-3 hover:bg-neutral-900 hover:text-red-200 w-full flex flex-row items-center justify-between cursor-pointer" href="propuestas">
+                        <Link className="px-6 py-3 hover:bg-neutral-900 hover:text-red-200 w-full flex flex-row items-center justify-between cursor-pointer" href="propuestas" onClick={closeSidebar}>
                             <span>Propuestas</span>
-                            <DocumentCheckIcon className="w-6 h-6" />                                   
+                            <DocumentCheckIcon className="w-6 h-6" />
                         </Link>
-                        <Link className="px-6 py-3 hover:bg-neutral-900 hover:text-red-200 w-full flex flex-row items-center justify-between cursor-pointer" href="jueguitos">
+                        <Link className="px-6 py-3 hover:bg-neutral-900 hover:text-red-200 w-full flex flex-row items-center justify-between cursor-pointer" href="jueguitos" onClick={closeSidebar}> 
                             <span>Jueguitos</span>
                             <PuzzlePieceIcon className="w-6 h-6" />                               
                         </Link>
                         <div className="my-3 h-px bg-neutral-800"></div>
-                        <Link className="px-6 py-3 hover:bg-neutral-900 hover:text-red-200 w-full flex flex-row items-center justify-between cursor-pointer" href="img/nashe.jpg">
+                        <Link className="px-6 py-3 hover:bg-neutral-900 hover:text-red-200 w-full flex flex-row items-center justify-between cursor-pointer" href="img/nashe.jpg" onClick={closeSidebar}>
                             <span>Boleta</span>
                             <PhotoIcon className="w-6 h-6" />
                         </Link>
-                        <div className="px-6 py-3 hover:bg-neutral-900 hover:text-red-200 w-full flex flex-row items-center justify-between cursor-pointer" href="video/spot-mobile.mp4">
+                        <div className="px-6 py-3 hover:bg-neutral-900 hover:text-red-200 w-full flex flex-row items-center justify-between cursor-pointer" href="video/spot-mobile.mp4" onClick={closeSidebar}>
                             <span>Video</span>
                             <VideoCameraIcon className="w-6 h-6" />
                         </div>

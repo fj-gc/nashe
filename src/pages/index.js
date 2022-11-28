@@ -1,17 +1,24 @@
 import { useEffect, useRef } from 'react'
 
+import Head from 'next/head';
+
 export default function Home() {
 
     var heroVideoRef = useRef(null);
 
     useEffect(() => {
         window.onscroll = (e) => {
-            heroVideoRef.current.style.marginBottom = "-" + (window.scrollY / 2) + "px";
+            try {
+                heroVideoRef.current.style.marginBottom = "-" + (window.scrollY / 2) + "px";
+            } catch (e) {}
         }
     }, [])
 
     return (
         <>
+            <Head>
+                <title>🤘NASHE🤘 - Francisco Javier Grecco Carman y Juan Manuel Lupacchini</title>
+            </Head>
             <div className="h-96 w-full bg-black relative overflow-hidden">
                 <video className="h-full w-full object-cover absolute bottom-0 left-0 right-0 scale-125 md:scale-100" src="video/spot-mobile.mp4" controls={false} autoPlay={true} muted={true} loop={true} ref={heroVideoRef} />
                 <div className="bg-gradient-to-r from-black/80 via-black/50 to-transparent h-full w-full z-10 absolute top-0 left-0 bottom-0 right-0 flex flex-col items-center justify-center px-8">
