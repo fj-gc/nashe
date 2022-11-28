@@ -22,6 +22,7 @@ export default function Jueguitos() {
                     <Jueguito
                         url={jueguito.url}
                         title={jueguito.title}
+                        key={index}
                         scrolling={jueguito.scrolling} />
                 ))}
                 <div className="flex flex-col md:flex-row items-center w-full max-w-6xl gap-8 md:gap-16 justify-between mb-8">
@@ -38,10 +39,10 @@ export default function Jueguitos() {
     )
 }
 
-function Jueguito({ title, url, scrolling }) {
+function Jueguito({ title, url, scrolling, key}) {
     return (
        
-        <div class="w-full max-w-6xl relative flex flex-col gap-24 py-4">
+        <div class="w-full max-w-6xl relative flex flex-col gap-24 py-4" key={key}>
             <div class="flex-1 flex flex-col gap-8">
                 <h3 class="uppercase text-2xl title-underline red text-center">{title}</h3>
                 <div class={styles.iwrapper}><iframe src={url} scrolling={(scrolling === undefined ? "yes" : (scrolling ? "yes" : "no"))} width="100%"></iframe></div>
