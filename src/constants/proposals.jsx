@@ -5,11 +5,14 @@ import {
     AcademicCapIcon,
     FaceSmileIcon, 
     CheckCircleIcon,
+    FunnelIcon,
     ArrowTrendingUpIcon, 
     TruckIcon, 
     GlobeAmericasIcon,
     HandThumbUpIcon,
     HeartIcon,
+    AtSymbolIcon,
+    UsersIcon,
     MegaphoneIcon,
     ScaleIcon,
     CakeIcon,
@@ -19,8 +22,8 @@ import {
 
 var proposals = [
     {
-        title: "Inversion de dinero",
-        content: "Mas inversion pública para mejorar la infraestructura",
+        title: "Inversión de dinero",
+        content: "Más inversión pública para mejorar la infraestructura",
         icon: <CreditCardIcon className="w-10 h-10 shrink-0" />
     },
     {
@@ -34,8 +37,8 @@ var proposals = [
         icon: <CheckCircleIcon className="w-10 h-10 shrink-0" />
     },
     {
-        title: "Frenar la inflacion",
-        content: "Frenar la inflacion para que el dinero tenga mas valor",
+        title: "Frenar la inflación",
+        content: "Frenar la inflación para que el dinero tenga más valor",
         icon: <ArrowTrendingUpIcon className="w-10 h-10 shrink-0" />
     },
     {
@@ -49,8 +52,8 @@ var proposals = [
         icon: <TruckIcon className="w-10 h-10 shrink-0" />
     },
     {
-        title: "No mas deuda externa",
-        content: "Para que podamos crecer mas rapido.",
+        title: "No más deuda externa",
+        content: "Para que podamos crecer más rápido.",
         icon: <CurrencyDollarIcon className="w-10 h-10 shrink-0" />
     },
     {
@@ -60,49 +63,65 @@ var proposals = [
     },
     {
         title: "Eco-friendly",
-        content: "Para que el planeta sea un lugar mejor.",
+        content: "Para asegurarnos un futuro en éste planeta.",
         icon: <GlobeAmericasIcon className="w-10 h-10 shrink-0" />
     },
     {
-        title: "Integracion regional",
-        content: "Para fomentar las uniones internacionales",
+        title: "Integración regional",
+        content: "Para fomentar la colaboración latinoamericana",
         icon: <HandThumbUpIcon className="w-10 h-10 shrink-0" />
     },
     {
+        title: "Menos abuso animal",
+        content: "La ciencia ha demostrado que los animales también tienen sentimientos",
+        icon: <FunnelIcon className="w-10 h-10 shrink-0" />
+    },
+    {
+        title: "Igualdad de género",
+        content: "Todos tenemos la misma capacidad de hacer de este país un lugar mejor",
+        icon: <AtSymbolIcon className="w-10 h-10 shrink-0" />
+    },
+    {
+        title: "No al racismo",
+        content: "En este país somos todos argentinos sin importar el color de piel",
+        icon: <UsersIcon className="w-10 h-10 shrink-0" />
+    },
+    {
         title: "Paz mundial",
-        content: "Aceptaremos refugiados que esten sufriendo",
+        content: "Aceptaremos refugiados que estén sufriendo",
         icon: <HeartIcon className="w-10 h-10 shrink-0" />
     },
     {
-        title: "Libertad de expresion",
+        title: "Libertad de expresión",
         content: "Para que las ideas de todos ayuden a mejorar el país",
         icon: <MegaphoneIcon className="w-10 h-10 shrink-0" />
     },
     {
-        title: "Pais mas federal",
-        content: "Para que todas las provincias tengan mas autoridad",
+        title: "País más federal",
+        content: "Para que todas las provincias tengan más autoridad",
         icon: <ScaleIcon className="w-10 h-10 shrink-0" />
     },
     {
-        title: "Fiestas mas baratas",
+        title: "Fiestas más baratas",
         content: "Para que todos puedan disfrutar con amigos",
         icon: <CakeIcon className="w-10 h-10 shrink-0" />
     },
     {
-        title: "Apoyo a las PyMEs",
-        content: "Para que puedan crecer y generar mas empleo",
+        title: "Apoyo a las PyMES",
+        content: "Para que puedan crecer y generar más empleo",
         icon: <BuildingOfficeIcon className="w-10 h-10 shrink-0" />
     },
     {
         title: "Anexionar Uruguay",
-        content: "Pacificamente, para que podamos tener mas recursos",
+        content: "Pacíficamente, porque culturalmente somos muy parecidos",
         icon: <MapIcon className="w-10 h-10 shrink-0" />
     },
-    {
-        title: "Sorteos de IVA pago",
-        content: "Sorteos anuales de 100 tarjetas de IVA pago por un año",
-        icon: <BanknotesIcon className="w-10 h-10 shrink-0" />
-    }
+// Mejor todavía no
+//    {
+//        title: "Sorteos de IVA pago",
+//        content: "Sorteos anuales de 100 tarjetas de IVA pago por un año",
+//        icon: <BanknotesIcon className="w-10 h-10 shrink-0" />
+//    }
 ];
 
 export default proposals

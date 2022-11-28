@@ -25,7 +25,7 @@ export default function Home() {
                     <div className="w-full max-w-6xl flex flex-row items-center">
                         <div className="flex-1 flex flex-col gap-4">
                             <h2 className="text-4xl uppercase">El pais necesita gente <span className="text-yellow-400">copada</span> y <span className="text-red-400">responsable</span></h2>
-                            <p>Ahi es cuando entramos nosotros. Actualmente, miles de los problemas actuales pueden ser resueltos si se les presta atencion. Si agarramos la pala y empezamos a laburar, es todo re <u>nashe</u>.</p>
+                            <p>Ahí es cuando entramos nosotros. Actualmente, miles de los problemas actuales pueden ser resueltos si se les presta atención. Si agarramos la pala y empezamos a laburar, podemos hacer del país un país <u>nashe</u>.</p>
                         </div>
                         <div className="flex-1 hidden md:flex flex-col items-center justify-center">
                             <div className="rounded-full relative h-20 w-20 border-2 border-white hover:border-transparent group transition-all cursor-pointer" onclick="MicroModal.show('video-modal')">
@@ -45,8 +45,8 @@ export default function Home() {
                 <div className="w-full max-w-6xl relative flex flex-col gap-24">
                     <div className="flex flex-col-reverse md:flex-row items-start gap-8">
                         <div className="flex-1 flex flex-col gap-8">
-                            <h3 className="uppercase text-2xl title-underline red">¿Que es lo que estamos diciendo?</h3>
-                            <p>Somos los optimistas, los que creen que con laburo y esfuerzo todo es posible. Con el plan correcto, los problemas que todos compartimos tienen solucion. No nos resignamos, sino que seguimos avanzando hacia un futuro mejor.</p>
+                            <h3 className="uppercase text-2xl title-underline red">¿Qué es lo que estamos diciendo?</h3>
+                            <p>Somos el partido solucionista, los que creen que con laburo y esfuerzo todo es posible. Con el plan correcto, los problemas que todos compartimos tienen solución. No nos resignamos, sino que seguimos avanzando hacia un futuro mejor.</p>
                         </div>
                         <div className="flex-1 flex flex-col items-center justify-center text-9xl leading-none w-full pb-10 md:pb-auto md:w-auto">
                             🤘

@@ -6,7 +6,7 @@ export default function Propuestas() {
             <div className="w-full bg-black relative flex flex-col items-center justify-center px-8 pb-16 pt-12 md:pb-24 md:pt-20">
                 <div className="w-full max-w-6xl">
                     <h2 className="text-4xl uppercase">Con propuestas que <span className="text-yellow-400">funcionan</span> el cambio es <span className="text-red-400">posible</span></h2>
-                    <p className="text-white mt-4 text-xl">Enterate cuales son nuestras propuestas para que entre todos hagamos de la Argentina un pais mejor.</p>
+                    <p className="text-white mt-4 text-xl">Enterate cuáles son nuestras propuestas para que entre todos hagamos de la Argentina un pais mejor.</p>
                 </div>
             </div>
             <div className="flex flex-col items-center gap-32 w-full px-8 pb-16">
