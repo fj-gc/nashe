@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react'
 
 import Head from 'next/head';
 
+import styles from '../styles/Home.module.css';
+
 export default function Home() {
 
     var heroVideoRef = useRef(null);
@@ -45,7 +47,7 @@ export default function Home() {
                 <div className="w-full max-w-6xl relative flex flex-col gap-24">
                     <div className="flex flex-col-reverse md:flex-row items-start gap-8">
                         <div className="flex-1 flex flex-col gap-8">
-                            <h3 className="uppercase text-2xl title-underline red">¿Qué es lo que estamos diciendo?</h3>
+                            <h3 className={`uppercase text-2xl ${styles.titleUnderline} ${styles.red}`}>¿Qué es lo que estamos diciendo?</h3>
                             <p>Somos el partido solucionista, los que creen que con laburo y esfuerzo todo es posible. Con el plan correcto, los problemas que todos compartimos tienen solución. No nos resignamos, sino que seguimos avanzando hacia un futuro mejor.</p>
                         </div>
                         <div className="flex-1 flex flex-col items-center justify-center text-9xl leading-none w-full pb-10 md:pb-auto md:w-auto">
@@ -53,7 +55,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="flex flex-col items-center gap-12">
-                        <h3 className="uppercase text-2xl title-underline center yellow text-center">¿Quienes somos?</h3>
+                        <h3 className={`uppercase text-2xl ${styles.titleUnderline} ${styles.center} ${styles.yellow} text-center`}>¿Quienes somos?</h3>
                         <div className="flex flex-col md:flex-row items-center gap-16 md:gap-0 justify-around w-full">
                             <div className="flex flex-col items-center gap-2 text-center w-40">
                                 <div className="h-40 w-40 rounded-full bg-neutral-800 relative">
@@ -72,11 +74,11 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="flex flex-col gap-8 md:hidden">
-                        <h3 className="uppercase text-2xl title-underline red">Nuestra boleta</h3>
+                        <h3 className={`uppercase text-2xl ${styles.titleUnderline} ${styles.red}`}>Nuestra boleta</h3>
                         <img src="img/nashe.jpg" />
                     </div>
                     <div className="flex flex-col gap-8 md:hidden">
-                        <h3 className="uppercase text-2xl title-underline yellow">Video informativo</h3>
+                        <h3 className={`uppercase text-2xl ${styles.titleUnderline} ${styles.yellow}`}>Video informativo</h3>
                         <video className="h-full w-full object-cover rounded" src="video/spot-mobile.mp4" controls />
                     </div>
                 </div>

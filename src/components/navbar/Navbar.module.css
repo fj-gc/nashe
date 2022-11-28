@@ -11,19 +11,6 @@
         @apply after:bg-yellow-400;
     }
 
-    .titleUnderline {
-        @apply relative after:block after:absolute after:top-[calc(100%+.15rem)] after:left-0 after:h-1 after:w-20;
-    }
-    .titleUnderline.center {
-        @apply after:left-[calc(50%-5rem)] after:w-[10rem];
-    }
-    .titleUnderline.red {
-        @apply after:bg-red-400;
-    }
-    .titleUnderline.yellow {
-        @apply after:bg-yellow-400;
-    }
-
     .sidebar.open {
         @apply left-0 w-screen;
     }
