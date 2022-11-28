@@ -1,6 +1,6 @@
 # Nashe
 
-[![Next.js Page](https://github.com/fj-gc/nashe/actions/workflows/nextjs.yml/badge.svg)](https://github.com/fj-gc/nashe/actions/workflows/nextjs.yml)
+[![Next.js Page Deployment](https://github.com/fj-gc/nashe/actions/workflows/nextjs.yml/badge.svg)](https://github.com/fj-gc/nashe/actions/workflows/nextjs.yml)
 
 ### Frameworks and tools
 - **Icons**: [heroicons v2 24x24 outline](https://heroicons.com)
