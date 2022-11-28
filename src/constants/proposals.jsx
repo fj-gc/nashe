@@ -17,7 +17,6 @@ import {
     ScaleIcon,
     CakeIcon,
     MapIcon,
-    BanknotesIcon
 } from "@heroicons/react/24/outline";
 
 var proposals = [
@@ -72,18 +71,18 @@ var proposals = [
         icon: <HandThumbUpIcon className="w-10 h-10 shrink-0" />
     },
     {
-        title: "Menos abuso animal",
-        content: "La ciencia ha demostrado que los animales también tienen sentimientos",
+        title: "No mas abuso animal",
+        content: "Porque los animales tambien tienen sentimientos",
         icon: <FunnelIcon className="w-10 h-10 shrink-0" />
     },
     {
         title: "Igualdad de género",
-        content: "Todos tenemos la misma capacidad de hacer de este país un lugar mejor",
+        content: "Todos tenemos capacidad de hacer de este país algo re nashe",
         icon: <AtSymbolIcon className="w-10 h-10 shrink-0" />
     },
     {
         title: "No al racismo",
-        content: "En este país somos todos argentinos sin importar el color de piel",
+        content: "Somos todos argentinos sin importar el color de piel",
         icon: <UsersIcon className="w-10 h-10 shrink-0" />
     },
     {
@@ -113,15 +112,9 @@ var proposals = [
     },
     {
         title: "Anexionar Uruguay",
-        content: "Pacíficamente, porque culturalmente somos muy parecidos",
+        content: "Pacíficamente, porque culturalmente somos parecidos",
         icon: <MapIcon className="w-10 h-10 shrink-0" />
-    },
-// Mejor todavía no
-//    {
-//        title: "Sorteos de IVA pago",
-//        content: "Sorteos anuales de 100 tarjetas de IVA pago por un año",
-//        icon: <BanknotesIcon className="w-10 h-10 shrink-0" />
-//    }
+    }
 ];
 
 export default proposals
