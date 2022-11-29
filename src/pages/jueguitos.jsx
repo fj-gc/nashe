@@ -64,7 +64,7 @@ export default function Jueguitos() {
                                     }}
                                 >
                                     <div className="h-28 w-28 relative">
-                                        <Image className="object-cover" src={game.thumbnailUrl} fill={true} />
+                                        <Image className="object-cover" src={game.thumbnailUrl} fill={true} alt={game.title + " thumbnail"} />
                                     </div>
                                     <div className="flex-1 p-4 flex flex-col gap-2">
                                         <h3 className="text-xl">{game.title}</h3>
