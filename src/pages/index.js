@@ -135,7 +135,7 @@ export default function Home() {
                         <h3 className="uppercase text-4xl">¡Queremos contar con <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-yellow-400">vos</span>!</h3>
                         <p>Si opinas igual que nosotros, ¡votanos! Juntos vamos a seguir creciendo.</p>
                         <div className="flex flex-col items-center justify-center gap-4 mt-4 w-full md:w-auto">
-                            <button className={`p-4 rounded-md border-2 border-white transition-all hover:scale-110 bg-white text-black leading-none w-full md:w-40 font-montserrat`} onclick="alert('Gracias! Juntos vamos a hacer un pais mejor.')">¡Los voto!</button>
+                            <button className={`p-4 rounded-md border-2 border-white transition-all hover:scale-110 bg-white text-black leading-none w-full md:w-40 font-montserrat`} onClick={() => {alert('Gracias! Juntos vamos a hacer un pais mejor.')}}>¡Los voto!</button>
                         </div>
                     </div>
                 </div>
